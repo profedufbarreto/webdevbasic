@@ -1,88 +1,100 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atividade 3.5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabelas e Formulários</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Tabela de Colegas</h1>
+    <h1>Cadastro de Alunos</h1>
 
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>Hobby</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Lucas</td>
-        <td>15</td>
-        <td>Jogos</td>
-      </tr>
-      <tr>
-        <td>Ana</td>
-        <td>16</td>
-        <td>Desenhar</td>
-      </tr>
-      <tr>
-        <td>Pedro</td>
-        <td>14</td>
-        <td>Futebol</td>
-      </tr>
-      <tr>
-        <td>Julia</td>
-        <td>15</td>
-        <td>Música</td>
-      </tr>
-      <tr>
-        <td>Rafael</td>
-        <td>16</td>
-        <td>Programação</td>
-      </tr>
-    </tbody>
-  </table>
+    <!-- TABELA DE ALUNOS -->
+    <h2>Alunos cadastrados</h2>
 
-  <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Curso</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
 
-  <h1>Cadastro</h1>
+        <tbody>
+            <tr>
+                <td>Ana Silva</td>
+                <td>Desenvolvimento de Sistemas</td>
+                <td>19</td>
+                <td>Novo Hamburgo</td>
+            </tr>
 
-  <form>
-    <!-- 1. TEXT -->
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" placeholder="Seu nome" required>
-    <br><br>
+            <tr>
+                <td>Pedro Souza</td>
+                <td>Informática</td>
+                <td>22</td>
+                <td>São Leopoldo</td>
+            </tr>
 
-    <!-- 2. EMAIL -->
-    <label for="email">Email:</label>
-    <input type="email" id="email" placeholder="seu@email.com" required>
-    <br><br>
+            <tr>
+                <td>Mariana Costa</td>
+                <td>Excel</td>
+                <td>25</td>
+                <td>Campo Bom</td>
+            </tr>
 
-    <!-- 3. PASSWORD -->
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" minlength="6" required>
-    <br><br>
+            <tr>
+                <td>Lucas Oliveira</td>
+                <td>Desenvolvimento de Sistemas</td>
+                <td>20</td>
+                <td>Estância Velha</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <!-- 4. NUMBER -->
-    <label for="idade">Idade:</label>
-    <input type="number" id="idade" min="13" max="99" required>
-    <br><br>
 
-    <!-- 5. DATE -->
-    <label for="nascimento">Data de nascimento:</label>
-    <input type="date" id="nascimento">
-    <br><br>
+    <!-- FORMULÁRIO DE CADASTRO -->
+    <h2>Novo cadastro</h2>
 
-    <!-- 6. COLOR -->
-    <label for="cor">Cor favorita:</label>
-    <input type="color" id="cor" value="#3498db">
-    <br><br>
+    <form action="#" method="post">
 
-    <button type="submit">Cadastrar</button>
-  </form>
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome"
+               placeholder="Digite seu nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Digite seu e-mail">
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade"
+               placeholder="Digite sua idade">
+
+        <label for="curso">Escolha seu curso:</label>
+
+        <select id="curso" name="curso">
+            <option value="">Selecione um curso</option>
+            <option value="informatica">Informática</option>
+            <option value="excel">Excel</option>
+            <option value="desenvolvimento">
+                Desenvolvimento de Sistemas
+            </option>
+        </select>
+
+        <label for="mensagem">Observações:</label>
+
+        <textarea id="mensagem" name="mensagem"
+                  rows="4"
+                  placeholder="Digite alguma observação"></textarea>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
 
 </body>
 </html>
